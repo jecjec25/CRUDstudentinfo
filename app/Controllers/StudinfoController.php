@@ -38,7 +38,7 @@ class StudinfoController extends BaseController
             'YearLevel' => $this->request->getVar('YearLevel'),
             'Program' => $this->request->getVar('Program'),
         ];
-        if ($ID!=null){
+        if ($ID!= null){
             $this->Studinfo->set($data)->where('ID', $ID)->update();
         }else{
             $this->Studinfo->save($data);
