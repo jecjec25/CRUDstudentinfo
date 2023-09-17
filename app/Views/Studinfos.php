@@ -6,7 +6,38 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="/save" method="post">
+        <label>StudentId</label>
+        <input type="text" name="StudentId" placeholder="StudentId">
+        <br>
+        <label>FullName</label>
+        <input type="text" name="FullName" placeholder="FullName">
+        <br>
+        <label>YearLevel</label>
+        <input type="text" name="YearLevel" placeholder="YearLevel">
+        <br>
+        <label>Program</label>
+        <input type="text" name="Program" placeholder="Program">
+        <br>
+        <input type="submit" value="save">
+    </form>
     <h1>Student Lists</h1>
+    <table border = "1">
+        <tr>
+            <th>StudentId</th>
+            <th>FullName</th>
+            <th>YearLevel</th>
+            <th>Program</th>
+        </tr>
+        <?php foreach ($Studinfo as $St): ?>
+            <tr>
+                <td><?= $St['StudentId'] ?></td>
+                <td><?= $St['FullName'] ?></td>
+                <td><?= $St['YearLevel'] ?></td>
+                <td><?= $St['Program'] ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
     
 </body>
 </html>

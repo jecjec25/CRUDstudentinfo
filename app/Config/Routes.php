@@ -8,3 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('/Studinfo', 'StudinfoController::jecjec');
 //$routes->get('/jecjec', 'Home::jecjec');
+$routes->post('/save', 'StudinfoController::save');
