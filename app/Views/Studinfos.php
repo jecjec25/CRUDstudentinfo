@@ -8,17 +8,16 @@
 <body>
     <form action="/save" method="post">
         <label>StudentId</label>
-        <input type="hidden" name="ID" value="<?= $Stu['ID'] ?>">
-        <input type="text" name="StudentId" placeholder="StudentId" value="<?= $Stu['StudentId'] ?>">
+        <input type="text" name="StudentId" placeholder="StudentId">
         <br>
         <label>FullName</label>
-        <input type="text" name="FullName" placeholder="FullName" value="<?= $Stu['FullName'] ?>">
+        <input type="text" name="FullName" placeholder="FullName">
         <br>
         <label>YearLevel</label>
-        <input type="text" name="YearLevel" placeholder="YearLevel" value="<?= $Stu['YearLevel'] ?>">
+        <input type="text" name="YearLevel" placeholder="YearLevel">
         <br>
         <label>Program</label>
-        <input type="text" name="Program" placeholder="Program" value="<?= $Stu['Program'] ?>">
+        <input type="text" name="Program" placeholder="Program">
         <br>
         <input type="submit" value="save">
     </form>
@@ -37,7 +36,7 @@
                 <td><?= $St['FullName'] ?></td>
                 <td><?= $St['YearLevel'] ?></td>
                 <td><?= $St['Program'] ?></td>
-                <td><a href="/delete/<?= $St['ID'] ?>">delete</a> || <a href="/edit/ <?= $St['ID'] ?>">edit</a></td>
+                <td><a href="/delete/<?= $St['ID'] ?>">delete</a> </td>
             </tr>
         <?php endforeach; ?>
     </table>
