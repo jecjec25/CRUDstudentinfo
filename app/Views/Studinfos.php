@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management System</title>
+    <title></title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -91,28 +91,47 @@
     </style>
 </head>
 <body>
-    <h1>Student Management System</h1>
-    <div class="container">
-        <div class="left-column">
-            <form action="/save" method="post">
-                <input type="hidden" name="ID" value="<?= isset($pro['ID'])?  $pro['ID']: ''?>">
-                <label>StudentId</label>
-                <input type="text" name="StudentId" placeholder="StudentId" value="<?= isset($pro['StudentId'])?  $pro['StudentId']: ''?>">
-                <br>
-                <label>FullName</label>
-                <input type="text" name="FullName" placeholder="FullName" value="<?= isset($pro['FullName'])?  $pro['FullName']: ''?>">
-                <br>
-                <label>YearLevel</label>
-                <input type="text" name="YearLevel" placeholder="YearLevel" value="<?= isset($pro['YearLevel'])?  $pro['YearLevel']: ''?>">
-                <br>
-                <label>Program</label>
-                <input type="text" name="Program" placeholder="Program" value="<?= isset($pro['Program'])?  $pro['Program']: ''?>">
-                <br>
-                <input type="submit" value="Save">
-            </form>
-        </div>
+<!-- ... Previous code ... -->
+
+<div class="left-column">
+    <form action="/save" method="post">
+        <input type="hidden" name="ID" value="<?= isset($pro['ID'])?  $pro['ID']: ''?>">
+        <!-- Table header for the form elements -->
+        <table>
+            <tr>
+                <th>Field Name</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td><label for="StudName">StudName</label></td>
+                <td><input type="text" name="StudName" placeholder="StudName" value="<?= isset($pro['StudName'])?  $pro['StudName']: ''?>"></td>
+            </tr>
+            <tr>
+                <td><label for="StudGender">StudGender</label></td>
+                <td><input type="text" name="StudGender" placeholder="StudGender" value="<?= isset($pro['StudGender'])?  $pro['StudGender']: ''?>"></td>
+            </tr>
+            <tr>
+                <td><label for="StudCourse">StudCourse</label></td>
+                <td><input type="text" name="StudCourse" placeholder="StudCourse" value="<?= isset($pro['StudCourse'])?  $pro['StudCourse']: ''?>"></td>
+            </tr>
+            <tr>
+                <td><label for="StudSection">StudSection</label></td>
+                <td><input type="text" name="StudSection" placeholder="StudSection" value="<?= isset($pro['StudSection'])?  $pro['StudSection']: ''?>"></td>
+            </tr>
+            <tr>
+                <td><label for="StudYear">StudYear</label></td>
+                <td><input type="text" name="StudYear" placeholder="StudYear" value="<?= isset($pro['StudYear'])?  $pro['StudYear']: ''?>"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Save">
+    </form>
+</div>
+
+<!-- ... Rest of the code ... -->
+
         <div class="right-column">
-            <h2>Student Lists</h2>
+            <h2>Students</h2>
             <table border="1">
                 <tr>
                     <th>Student Name</th>
@@ -125,10 +144,11 @@
                 <?php if(isset($Studinfo)) ?>
                 <?php foreach ($Studinfo as $St): ?>
                     <tr>
-                        <td><?= $St['StudentId'] ?></td>
-                        <td><?= $St['FullName'] ?></td>
-                        <td><?= $St['YearLevel'] ?></td>
-                        <td><?= $St['Program'] ?></td>
+                        <td><?= $St['StudName'] ?></td>
+                        <td><?= $St['StudGender'] ?></td>
+                        <td><?= $St['StudCourse'] ?></td>
+                        <td><?= $St['StudSection'] ?></td>
+                        <td><?= $St['StudYear'] ?></td>
                         <td><a href="/delete/<?= $St['ID'] ?>">Delete</a> || <a href="/edit/<?= $St['ID'] ?>">Edit</a></td>
                     </tr>
                 <?php endforeach; ?>

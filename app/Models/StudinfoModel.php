@@ -13,7 +13,7 @@ class StudinfoModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['StudName', 'StudGender', 'StudCrud', 'StudSection', 'StudYear'];
+    protected $allowedFields    = ['StudName', 'StudGender', 'StudCourse', 'StudSection', 'StudYear'];
 
     // Dates
     protected $useTimestamps = false;

@@ -23,10 +23,11 @@ class StudinfoController extends BaseController
     {
         $ID = $_POST['ID'];
         $data = [
-            'StudentId' => $this->request->getVar('StudentId'),
-            'FullName' => $this->request->getVar('FullName'),
-            'YearLevel' => $this->request->getVar('YearLevel'),
-            'Program' => $this->request->getVar('Program'),
+            'StudName' => $this->request->getVar('StudName'),
+            'StudGender' => $this->request->getVar('StudGender'),
+            'StudCourse' => $this->request->getVar('StudCourse'),
+            'StudSection' => $this->request->getVar('StudSection'),
+            'StudYear' => $this->request->getVar('StudYear'),
         ];
         if($ID != null){
             $this->Studinfo->set($data)->where('ID', $ID)->update();

@@ -1,0 +1,12 @@
+CRITICAL - 2023-09-21 10:44:41 --> Undefined array key "StudentId"
+in APPPATH\Views\Studinfos.php on line 128.
+ 1 APPPATH\Views\Studinfos.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "StudentId"', 'C:\\laragon\\www\\CRUDstudentinfo\\app\\Views\\Studinfos.php', 128)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\CRUDstudentinfo\\app\\Views\\Studinfos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Studinfos', [], true)
+ 5 APPPATH\Controllers\StudinfoController.php(53): view('Studinfos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\StudinfoController->jecjec()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudinfoController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\CRUDstudentinfo\\public\\index.php')
