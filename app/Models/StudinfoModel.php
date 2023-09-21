@@ -7,13 +7,13 @@ use CodeIgniter\Model;
 class StudinfoModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'students';
+    protected $table            = 'studentt';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['StudentId', 'FullName', 'YearLevel', 'Program'];
+    protected $allowedFields    = ['StudName', 'StudGender', 'StudCrud', 'StudSection', 'StudYear'];
 
     // Dates
     protected $useTimestamps = false;
