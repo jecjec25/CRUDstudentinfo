@@ -8,9 +8,11 @@ use App\Controllers\BaseController;
 class StudinfoController extends BaseController
 {
     private $Studinfo;
+    private $Section;
     public function __construct()
     {
         $this->Studinfo = new \App\Models\StudinfoModel();
+        $this->Section = new \App\Models\SectionModel();
     }
 
     public function delete($ID)
@@ -48,10 +50,15 @@ class StudinfoController extends BaseController
         ];
         return view ('Studinfos', $data);
     }
+
     public function jecjec()
     {
-        $data['Studinfo'] = $this->Studinfo->findAll();
+        $data = ['Studinfo' => $this->Studinfo->findAll(),
+        'Section' => $this->Section->findAll(), 
+        ];
         return view ('Studinfos', $data);
+    }
+        
     }
     public function index()
     {
