@@ -21,21 +21,31 @@ class StudinfoController extends BaseController
 
     public function save()
     {
-        //$ID =$_POST['ID'];
+        $ID = $_POST['ID'];
         $data = [
             'StudentId' => $this->request->getVar('StudentId'),
             'FullName' => $this->request->getVar('FullName'),
             'YearLevel' => $this->request->getVar('YearLevel'),
             'Program' => $this->request->getVar('Program'),
         ];
+        if($ID != null){
+            $this->Studinfo->set($data)->where('ID', $ID)->update();
+        }
+        else {
+            $this->Studinfo->save($data);
+        }
+
+        return redirect()->to('/Studinfo');   
         
-        $this->Studinfo->save($data);
-        return redirect()->to('/Studinfo');
     }
 
-    public function Studinfo($Studinfo)
+    public function edit($ID)
     {
-        echo $Studinfo;
+        $data = [
+            'Studinfo' => $this->Studinfo->findAll(),
+            'pro' => $this->Studinfo->where('ID', $ID)->first(),
+        ];
+        return view ('Studinfos', $data);
     }
     public function jecjec()
     {

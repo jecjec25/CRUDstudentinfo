@@ -7,17 +7,18 @@
 </head>
 <body>
     <form action="/save" method="post">
+        <input type="hidden" name="ID" value="<?= isset($pro['ID'])?  $pro['ID']: ''?>">
         <label>StudentId</label>
-        <input type="text" name="StudentId" placeholder="StudentId">
+        <input type="text" name="StudentId" placeholder="StudentId" value="<?= isset($pro['StudentId'])?  $pro['StudentId']: ''?>">
         <br>
         <label>FullName</label>
-        <input type="text" name="FullName" placeholder="FullName">
+        <input type="text" name="FullName" placeholder="FullName" value="<?= isset($pro['FullName'])?  $pro['FullName']: ''?>">
         <br>
         <label>YearLevel</label>
-        <input type="text" name="YearLevel" placeholder="YearLevel">
+        <input type="text" name="YearLevel" placeholder="YearLevel" value="<?= isset($pro['YearLevel'])?  $pro['YearLevel']: ''?>">
         <br>
         <label>Program</label>
-        <input type="text" name="Program" placeholder="Program">
+        <input type="text" name="Program" placeholder="Program" value="<?= isset($pro['Program'])?  $pro['Program']: ''?>">
         <br>
         <input type="submit" value="save">
     </form>
@@ -30,13 +31,14 @@
             <th>Program</th>
             <th>Action</th>
         </tr>
+        <?php if(isset($Studinfo))?>
         <?php foreach ($Studinfo as $St): ?>
             <tr>
                 <td><?= $St['StudentId'] ?></td>
                 <td><?= $St['FullName'] ?></td>
                 <td><?= $St['YearLevel'] ?></td>
                 <td><?= $St['Program'] ?></td>
-                <td><a href="/delete/<?= $St['ID'] ?>">delete</a> </td>
+                <td><a href="/delete/<?= $St['ID'] ?>">delete</a> || <a href="/edit/<?= $St['ID'] ?>">EDIT</a> </td>
             </tr>
         <?php endforeach; ?>
     </table>
