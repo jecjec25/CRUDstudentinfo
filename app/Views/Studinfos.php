@@ -1,9 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Information</title>
+<style>
+    ul li{
+        list-style-type:none;
+    }
+    .cus{
+        float:left;
+    }
+    .item{
+        text-align:center;
+        border-style:solid;
+        width:220px;
+        height:190px;
+    }
+</style>
 </head>
 <body>
 
@@ -46,30 +61,26 @@
     </form>
 </div>
 
-
+            
 <div class="right-column">
     <h2>Students</h2>
-    <table border="1">
-        <tr>
-            <th>Student Name</th>
-            <th>Gender</th>
-            <th>Course</th>
-            <th>Student Section</th>
-            <th>Student Year</th>
-            <th>Action</th>
-        </tr>
         <?php if(isset($Studinfo)) ?>
+        
         <?php foreach ($Studinfo as $St): ?>
-            <tr>
-                <td><?= $St['StudName'] ?></td>
-                <td><?= $St['StudGender'] ?></td>
-                <td><?= $St['StudCourse'] ?></td>
-                <td><?= $St['StudSection'] ?></td>
-                <td><?= $St['StudYear'] ?></td>
-                <td><a href="/delete/<?= $St['ID'] ?>">Delete</a> || <a href="/edit/<?= $St['ID'] ?>">Edit</a></td>
-            </tr>
+            <div class="cus">
+            <ul>
+            <div class ="item">
+                <h3>List</h3>
+                <li><?= $St['StudName'] ?></li>
+                <li><?= $St['StudGender'] ?></li>
+                <li><?= $St['StudCourse'] ?></li>
+                <li><?= $St['StudSection'] ?></li>
+                <li><?= $St['StudYear'] ?></li>
+                <li><a href="/delete/<?= $St['ID'] ?>">Delete</a> || <a href="/edit/<?= $St['ID'] ?>">Edit</a></td>
+        </ul>
+        </div>
         <?php endforeach; ?>
-    </table>
+    
 </div>
 </div>
 </body>
