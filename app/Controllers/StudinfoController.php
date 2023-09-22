@@ -45,7 +45,8 @@ class StudinfoController extends BaseController
     public function edit($ID)
     {
         $data = [
-            'Studinfo' => $this->Studinfo->findAll(),
+            'Studinfo' => $this->Studinfo->findAll(), 
+            'Section' => $this->Section->findAll(),
             'pro' => $this->Studinfo->where('ID', $ID)->first(),
         ];
         return view ('Studinfos', $data);
@@ -59,9 +60,8 @@ class StudinfoController extends BaseController
         return view ('Studinfos', $data);
     }
         
-    }
     public function index()
     {
         //
     }
-}
+
