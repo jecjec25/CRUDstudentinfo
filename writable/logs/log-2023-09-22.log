@@ -1,0 +1,26 @@
+CRITICAL - 2023-09-22 08:07:02 --> Class "App\Modesls\SectionModel" not found
+in APPPATH\Controllers\StudinfoController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\StudinfoController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\CRUDstudentinfo\\public\\index.php')
+CRITICAL - 2023-09-22 08:24:01 --> Undefined variable $Section
+in APPPATH\Views\Studinfos.php on line 37.
+ 1 APPPATH\Views\Studinfos.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Section', 'C:\\laragon\\www\\CRUDstudentinfo\\app\\Views\\Studinfos.php', 37)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\CRUDstudentinfo\\app\\Views\\Studinfos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('Studinfos', [], true)
+ 5 APPPATH\Controllers\StudinfoController.php(52): view('Studinfos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\StudinfoController->edit('8')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudinfoController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\CRUDstudentinfo\\public\\index.php')
+CRITICAL - 2023-09-22 08:25:37 --> Call to a member function findAll() on null
+in APPPATH\Controllers\StudinfoController.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\StudinfoController->edit('7')
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudinfoController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\CRUDstudentinfo\\public\\index.php')

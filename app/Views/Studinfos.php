@@ -12,7 +12,7 @@
         <input type="hidden" name="ID" value="<?= isset($pro['ID'])?  $pro['ID']: ''?>">
         
         <label for="StudName">Name</label>
-        <input type="text" name="StudName" placeholder="Student Name" value="<?= isset($pro['StudName'])?  $pro['StudName']: ''?>">
+        <input type="text" name="StudName" placeholder="Student Name"  value="<?= isset($pro['StudName'])?  $pro['StudName']: ''?>" required>
         <br>
         <label for="StudGender">Gender</label>
         <select type="text" name="StudGender" placeholder="Gender" value="<?= isset($pro['StudGender'])?  $pro['StudGender']: ''?>">
@@ -33,7 +33,11 @@
         </select>
         <br>
         <label for="StudSection">Section</label>
-        <input type="text" name="StudSection" placeholder="Section" value="<?= isset($pro['StudSection'])?  $pro['StudSection']: ''?>">
+       <select name="StudSection">
+        <?php foreach($Section as $sec):?>
+        <option ><?= $sec['section']?></option>
+        <?php endforeach;?>
+        </select>
         <br>
         <label for="StudYear">Year Level</label>
         <input type="number" name="StudYear" placeholder="Year Level" value="<?= isset($pro['StudYear'])?  $pro['StudYear']: ''?>">

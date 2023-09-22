@@ -13,8 +13,8 @@ class StudinfoController extends BaseController
     {
         $this->Studinfo = new \App\Models\StudinfoModel();
         $this->Section = new \App\Models\SectionModel();
+        
     }
-
     public function delete($ID)
     {
         $this->Studinfo->delete($ID);
@@ -64,4 +64,5 @@ class StudinfoController extends BaseController
     {
         //
     }
+}
 
